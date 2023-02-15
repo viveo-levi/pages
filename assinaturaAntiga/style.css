@@ -1,0 +1,11 @@
+﻿/* CSS files add styling rules to your content */
+div {
+  overflow:hidden;
+  max-height: 480px;
+  transition: 1s linear;
+}
+
+.hide {
+  max-height: 0;
+  opacity: 0;
+}

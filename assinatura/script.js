@@ -1,0 +1,93 @@
+function showInput() {
+    // Get user name
+       var user = document.getElementById("user_input").value;
+       display_user.innerHTML = user;
+       
+    // Get user role
+       var role = document.getElementById("role_input").value;
+       display_role.innerHTML = role;
+       
+    // Get user phone and edit if mobile or landline
+       var phone = document.getElementById("phone_input").value;
+       if (phone.length === 10) { 
+       // when landline
+       var ddd = phone.substring(0, 2);
+       var phone1 = phone.substring(2, 6);
+       var phone2 = phone.substring(6, 10);
+       display_phone.innerHTML ='+55 ' + '(' + ddd + ')' + ' ' + phone1 + '.' + phone2; }
+       else { 
+       // when mobile
+       var ddd = phone.substring(0, 2);
+       var phone1 = phone.substring(2, 7);
+       var phone2 = phone.substring(7, 11);
+       display_phone.innerHTML ='+55 ' + '(' + ddd + ')' + ' ' + phone1 + '.' + phone2; }
+
+    // Get user phone branch and display after the phone number
+       var phoneBranch = document.getElementById("phoneBranch_input").value;
+       if (phoneBranch !== '')
+       display_phoneBranch.innerHTML ='/ramal ' + phoneBranch; 
+                    
+    // Get user mail
+       var mail = document.getElementById("mail_input").value;
+       display_mail.innerHTML = mail; 
+       display_mail.parentNode.setAttribute("href", "mailto:" + mail);
+       
+    // Get business unit information and edit
+       var logoUnit = document.getElementById("logoUnidade").value
+       if (logoUnit !== "unidade") { 
+       var unit = document.getElementById("unidade");
+        feedArray=unit.value.split(";"); 
+        display_bu.innerHTML = feedArray[0]; 
+        display_buStreet.innerHTML = feedArray[1];
+        display_buAddress.innerHTML = feedArray[2];
+        display_buPostalCode.innerHTML = feedArray[3];
+        display_webpage.innerHTML = feedArray[4];
+        var webpage = "https://" + feedArray[4];
+        var logo = "https://midias.viveo.com.br/assets/images/logo/logoViveo.png"
+        var footer = "https://midias.viveo.com.br/assets/images/logo/" + feedArray[6];
+        document.getElementById('logo').src = logo;
+        document.getElementById('footer').src = footer;
+        document.getElementById('webpage').setAttribute("href",webpage);
+  } else { 
+       var unit = document.getElementById("unidade");
+        feedArray=unit.value.split(";"); 
+        display_bu.innerHTML = feedArray[0]; 
+        display_buStreet.innerHTML = feedArray[1];
+        display_buAddress.innerHTML = feedArray[2];
+        display_buPostalCode.innerHTML = feedArray[3];
+        display_webpage.innerHTML = feedArray[4];
+        var webpage = "https://" + feedArray[4];
+        var logo = "https://midias.viveo.com.br/assets/images/logo/" + feedArray[5];
+        var footer = "https://midias.viveo.com.br/assets/images/logo/" + feedArray[6];
+        document.getElementById('logo').src = logo;
+        document.getElementById('footer').src = footer;
+        document.getElementById('webpage').setAttribute("href",webpage)};
+
+    // Hide input fields and show signature
+       var gerador = document.getElementById('gerador');
+       var signature = document.getElementById('signature');
+       var copy = document.getElementById('copy');
+       signature.classList.remove('hide');
+       copy.classList.remove('hide');
+       gerador.classList.add('hide');
+}
+
+function CopyToClipboard(id)
+  {
+    var r = document.createRange();
+    r.selectNode(document.getElementById(id));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(r);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    alert("Assinatura copiada para sua área de transferência!")
+  }
+
+function goBack() {
+       var gerador = document.getElementById('gerador');
+       var signature = document.getElementById('signature');
+       var copy = document.getElementById('copy');
+       signature.classList.add('hide');
+       copy.classList.add('hide');
+       gerador.classList.remove('hide');
+}

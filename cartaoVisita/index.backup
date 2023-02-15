@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Levi Augusto Franzen</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="style.css">
+		<noscript>  <link rel="stylesheet" href="noscript.css"></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+              <span class="avatar"><a href="images/qrcode.png"><img src="images/avatar.png" width="35%" alt="" /></a></span>
+							<h1>Levi Augusto Franzen</h1>
+              <p>Analista de TI<br> &nbsp;&bull;&nbsp; <br>
+              <a href="http://lencoumedecido.com.br">Grupo FW</a></p>
+						</header>
+						<footer>
+							<ul class="icons">
+								<li><a href="tel:+554733372500" class="fa-phone">Telefone</a></li>
+                                <li><a href="mailto:levi.franzen@grupofw.com.br" class="fa-envelope">Email</a></li>
+                                <li><a href="skype:levi.franzen@grupofw.com.br?chat" class="fa-skype">Skype</a></li>
+								<li><a href="http://wa.me/5547991181867" class="fa-whatsapp">Whatsapp</a></li>
+                            </ul>
+						</footer>
+					</section>
+       
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+              <li><a href="LICENSE.md">License</a> </li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+			</div> 
+    
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>
